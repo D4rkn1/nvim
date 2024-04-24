@@ -4,8 +4,17 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>d<leader>", function() require("trouble").toggle() end)
-		vim.keymap.set("n", "<leader>dj", function() require("trouble").next({skip_groups = true , jump = true}) end)
-		vim.keymap.set("n", "<leader>dk", function() require("trouble").previous({skip_groups = true , jump = true}) end)
+		local trouble = require("trouble")
+		vim.keymap.set("n", "<leader>d<leader>", function() trouble.toggle() end)
+		vim.keymap.set("n", "<leader>dj", function()
+			if not trouble.is_open() then trouble.toggle() end
+			require("trouble").next({skip_groups = true , jump = true})
+			if trouble.is_open() then trouble.toggle() end
+		end)
+		vim.keymap.set("n", "<leader>dk", function()
+			if not trouble.is_open() then trouble.toggle() end
+			require("trouble").previous({skip_groups = true , jump = true})
+			if trouble.is_open() then trouble.toggle() end
+		end)
 	end,
 }
