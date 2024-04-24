@@ -34,18 +34,18 @@ return {
 			},
 			signs = {
 				text = {
-					[vim.diagnostic.severity.ERROR] = '',
-					[vim.diagnostic.severity.WARN] = '',
+					[vim.diagnostic.severity.ERROR] = 'R',
+					[vim.diagnostic.severity.WARN] = 'X',
 				},
 
 				numhl = {
-					[vim.diagnostic.severity.WARN] = 'WarnMsg',
-					[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+					[vim.diagnostic.severity.WARN] = '',
+					[vim.diagnostic.severity.ERROR] = '',
 				},
 
 				linehl = {
-					[vim.diagnostic.severity.WARN] = 'WarnMsg',
-					[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+					[vim.diagnostic.severity.WARN] = '',
+					[vim.diagnostic.severity.ERROR] = '',
 				}
 			},
 		})
