@@ -25,7 +25,7 @@ return {
                 end, opts)
 
                 vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
-                vim.keymap.set("n", "<leader>gp", ":!git push", opts)
+                vim.keymap.set("n", "<leader>gp", ":!git push<CR>", opts)
             end,
         })
     end
