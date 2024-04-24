@@ -37,17 +37,5 @@ return {
 				{ name = 'buffer' },
 			})
 		})
-
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		require('lspconfig')['lua_ls'].setup {
-			capabilities = capabilities
-		}
-		require('lspconfig')['csharp_ls'].setup {
-			capabilities = capabilities
-		}
-		require('lspconfig')['gopls'].setup {
-			capabilities = capabilities
-		}
-
 	end,
 }

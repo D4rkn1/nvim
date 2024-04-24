@@ -1,7 +1,11 @@
 return {
 	"neovim/nvim-lspconfig",
+	dependencies = {
+		'hrsh7th/cmp-nvim-lsp',
+	},
 	config = function()
 		local lspconfig = require('lspconfig')
+		local capabilities = require('cmp_nvim_lsp').default_capabilities()
 		lspconfig.lua_ls.setup({
 			settings = {
 				Lua = {
@@ -9,10 +13,18 @@ return {
 						globals = { "vim", "it", "describe", "before_each", "after_each" },
 					}
 				}
-			}
+			},
+			capabilities = capabilities,
 		})
-		lspconfig.csharp_ls.setup({})
-		lspconfig.gopls.setup({})
+		lspconfig.csharp_ls.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.gopls.setup({
+			capabilities = capabilities,
+		})
+		lspconfig.clangd.setup({
+			capabilities = capabilities,
+		})
 
 		vim.diagnostic.config({
 			float = {
