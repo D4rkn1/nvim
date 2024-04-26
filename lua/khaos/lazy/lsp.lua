@@ -29,8 +29,8 @@ return {
 		vim.diagnostic.config({
 			float = {
 				focusable = true,
-				border = "rounded",
-				source = "always",
+				border = "none",
+				source = "never",
 			},
 			signs = {
 				text = {
