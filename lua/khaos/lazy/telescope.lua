@@ -12,5 +12,6 @@ return {
 		vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
 		vim.keymap.set("n", "<leader>pd", builtin.diagnostics, {})
 		vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
+		vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
 	end
 }
