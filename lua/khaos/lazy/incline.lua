@@ -10,7 +10,6 @@ return {
 				local color = modified and modifiedColor or normalColor
 				return {
 					filename,
-					modified and { ' *' } or '',
 					guifg = color,
 				}
 			end
