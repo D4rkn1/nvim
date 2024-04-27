@@ -4,5 +4,4 @@ vim.keymap.set("n", "<leader>S", "<cmd>bd!<CR>")
 vim.keymap.set("n", "<leader>q", "<cmd>qa!<CR>")
 vim.keymap.set("n", "<leader>L", "<cmd>:Lazy<CR>")
 vim.keymap.set("v", "<leader>y", [["*y]])
-
-
+vim.keymap.set("n", "<leader>e", "<cmd>:e!<CR>")
