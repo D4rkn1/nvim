@@ -12,17 +12,17 @@ return {
 				end
 
 				-- Navigation
-				map('n', '<leader>cj', function()
+				map('n', '<leader>;j', function()
 					if vim.wo.diff then
-						vim.cmd.normal({ '<leader>cj', bang = true })
+						vim.cmd.normal({ '<leader>;j', bang = true })
 					else
 						gitsigns.nav_hunk('next')
 					end
 				end)
 
-				map('n', '<leader>ck', function()
+				map('n', '<leader>;k', function()
 					if vim.wo.diff then
-						vim.cmd.normal({ '<leader>ck', bang = true })
+						vim.cmd.normal({ '<leader>;k', bang = true })
 					else
 						gitsigns.nav_hunk('prev')
 					end
