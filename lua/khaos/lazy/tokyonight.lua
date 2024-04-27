@@ -1,12 +1,12 @@
 return {
 	'folke/tokyonight.nvim',
-	on_colors = function(color)
-		color.Comment = "#05420a"
-	end,
 	config = function()
 		require("tokyonight").setup({
 			style = "storm",
-			transparent = true
+			transparent = true,
+			on_colors = function(color)
+				color.comment = "#00a16b"
+			end,
 		})
 
 		require("khaos.color")
