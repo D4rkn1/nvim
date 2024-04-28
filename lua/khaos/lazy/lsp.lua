@@ -32,12 +32,8 @@ return {
 				border = "none",
 				source = "never",
 			},
+			virtual_text = false,
 			signs = {
-				text = {
-					[vim.diagnostic.severity.ERROR] = 'R',
-					[vim.diagnostic.severity.WARN] = 'X',
-				},
-
 				numhl = {
 					[vim.diagnostic.severity.WARN] = '',
 					[vim.diagnostic.severity.ERROR] = '',
