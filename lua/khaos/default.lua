@@ -31,14 +31,12 @@ vim.opt.autoread = true
 vim.opt.laststatus = 3
 
 
-vim.api.nvim_create_autocmd({"VimEnter","WinEnter"}, {
-	pattern = "*",
+vim.api.nvim_create_autocmd({"BufWinEnter", "VimEnter","WinEnter"}, {
 	callback = function()
 		vim.opt.cursorline = true
 	end
 })
-vim.api.nvim_create_autocmd({"BufWinEnter","WinLeave"}, {
-	pattern = "*",
+vim.api.nvim_create_autocmd({"WinLeave"}, {
 	callback = function()
 		vim.opt.cursorline = false
 	end
