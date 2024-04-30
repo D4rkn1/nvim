@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 vim.opt.wrap = false
 
 vim.opt.tabstop = 4
@@ -28,3 +27,19 @@ vim.opt.colorcolumn = "80"
 vim.opt.cursorline = true
 
 vim.opt.autoread = true
+
+vim.opt.laststatus = 3
+
+
+vim.api.nvim_create_autocmd({"VimEnter","WinEnter"}, {
+	pattern = "*",
+	callback = function()
+		vim.opt.cursorline = true
+	end
+})
+vim.api.nvim_create_autocmd({"BufWinEnter","WinLeave"}, {
+	pattern = "*",
+	callback = function()
+		vim.opt.cursorline = false
+	end
+})
