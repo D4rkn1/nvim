@@ -26,7 +26,7 @@ return {
 				lualine_b = { 'branch', 'diagnostics' },
 				lualine_c = {},
 				lualine_x = {},
-				lualine_y = { 'filetype' },
+				lualine_y = {},
 				lualine_z = { 'location' }
 			},
 			inactive_sections = {
