@@ -28,13 +28,15 @@ vim.opt.autoread = true
 
 vim.opt.laststatus = 3
 
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
-vim.api.nvim_create_autocmd({"BufWinEnter", "VimEnter","WinEnter"}, {
+vim.api.nvim_create_autocmd({ "BufWinEnter", "VimEnter", "WinEnter" }, {
 	callback = function()
 		vim.opt.cursorline = true
 	end
 })
-vim.api.nvim_create_autocmd({"WinLeave"}, {
+vim.api.nvim_create_autocmd({ "WinLeave" }, {
 	callback = function()
 		vim.opt.cursorline = false
 	end
