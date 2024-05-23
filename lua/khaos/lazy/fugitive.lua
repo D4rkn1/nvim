@@ -2,6 +2,13 @@ return {
     "tpope/vim-fugitive",
     config = function()
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+        vim.keymap.set("n", "<leader>gl", ":Git log --oneline<CR>", {silent = true})
+        vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
+		vim.keymap.set("n", "<leader>gj", function()
+			local file = vim.fn.expand("%:.")
+            local gitCmd = ":Git log -p -- " .. file
+			vim.cmd(gitCmd)
+		end)
 
         local khaos_fug = vim.api.nvim_create_augroup("khaos_fug", {})
 
@@ -24,7 +31,6 @@ return {
                     vim.cmd.Git({'pull',  '--rebase'})
                 end, opts)
 
-                vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
                 vim.keymap.set("n", "<leader>gp", ":!git push<CR>", opts)
             end,
         })
