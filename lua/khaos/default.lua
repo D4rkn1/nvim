@@ -28,7 +28,7 @@ vim.opt.autoread = true
 
 vim.opt.laststatus = 3
 
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.api.nvim_create_autocmd({ "BufWinEnter", "VimEnter", "WinEnter" }, {

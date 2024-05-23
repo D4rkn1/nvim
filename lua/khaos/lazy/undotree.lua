@@ -1,5 +1,6 @@
 return {
 	'jiaoshijie/undotree',
+	branch = "master",
 	dependencies = "nvim-lua/plenary.nvim",
 	config = function()
 		require('undotree').setup({})
