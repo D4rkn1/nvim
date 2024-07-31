@@ -9,6 +9,9 @@ return {
 			view_options = {
 				show_hidden = true,
 			},
+			keymaps = {
+				["<leader>."] = "actions.select",
+			},
 		})
 		vim.keymap.set("n", "<leader>,", "<CMD>Oil<CR>")
 	end,
