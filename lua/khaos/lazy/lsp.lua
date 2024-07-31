@@ -24,6 +24,10 @@ return {
 		})
 		lspconfig.clangd.setup({
 			capabilities = capabilities,
+			cmd = {"clangd", "--query-driver=C:\\msys64\\mingw64\\bin\\g++.exe"},
+		})
+		lspconfig.rust_analyzer.setup({
+			capabilities = capabilities,
 		})
 
 		vim.diagnostic.config({
