@@ -8,7 +8,5 @@ return {
 				color.comment = "#00a16b"
 			end,
 		})
-
-		require("khaos.color")
 	end,
 }
