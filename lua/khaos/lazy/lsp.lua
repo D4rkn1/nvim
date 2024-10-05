@@ -2,32 +2,37 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		'hrsh7th/cmp-nvim-lsp',
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
 		local lspconfig = require('lspconfig')
 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		lspconfig.lua_ls.setup({
-			settings = {
-				Lua = {
-					diagnostics = {
-						globals = { "vim", "it", "describe", "before_each", "after_each" },
+		require("mason").setup()
+		require("mason-lspconfig").setup {
+			ensure_installed = { "lua_ls" },
+			automatic_installation = true,
+		}
+
+		require("mason-lspconfig").setup_handlers {
+			function(server_name)
+				require("lspconfig")[server_name].setup {
+					capabilities = capabilities
+				}
+			end,
+			["lua_ls"] = function()
+				lspconfig.lua_ls.setup {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim", "it", "describe", "before_each", "after_each" },
+							}
+						},
+						capabilities = capabilities,
 					}
 				}
-			},
-			capabilities = capabilities,
-		})
-		lspconfig.csharp_ls.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.ts_ls.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.gopls.setup({
-			capabilities = capabilities,
-		})
-		lspconfig.clangd.setup({
-			capabilities = capabilities,
-		})
+			end,
+		}
 
 		vim.diagnostic.config({
 			float = {
@@ -52,4 +57,3 @@ return {
 		require('khaos.lspattach')
 	end,
 }
-

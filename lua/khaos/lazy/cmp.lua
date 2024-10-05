@@ -7,6 +7,7 @@ return {
 		'hrsh7th/cmp-cmdline',
 		'L3MON4D3/LuaSnip',
 		'saadparwaiz1/cmp_luasnip',
+		"hrsh7th/cmp-nvim-lua",
 	},
 
 	config = function()
@@ -27,6 +28,7 @@ return {
 			}),
 			sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
+				{ name = 'nvim_lua' },
 				{ name = 'luasnip' },
 			}, {
 				{ name = 'buffer' },
