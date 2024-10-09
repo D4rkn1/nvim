@@ -40,3 +40,5 @@ vim.api.nvim_create_autocmd({ "WinLeave" }, {
         vim.opt.cursorline = false
     end
 })
+
+vim.opt.conceallevel = 1
