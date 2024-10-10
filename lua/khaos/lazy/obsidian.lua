@@ -10,7 +10,7 @@ return {
         workspaces = {
             {
                 name = "personal",
-                path = "~/vault/vlt",
+                path = "~/vaults/personal",
             }
         },
         {
@@ -25,6 +25,32 @@ return {
                     folder = vim.NIL,
                 },
                 disable_frontmatter = true,
+            },
+        },
+        mappings = {
+            ["<leader>al"] = {
+                action = function()
+                    return vim.cmd('ObsidianToday')
+                end,
+                opts = { noremap = false, expr = false, buffer = true },
+            },
+            ["<leader>aj"] = {
+                action = function()
+                    return vim.cmd('ObsidianTomorrow')
+                end,
+                opts = { noremap = false, expr = false, buffer = true },
+            },
+            ["<leader>ak"] = {
+                action = function()
+                    return vim.cmd('ObsidianYesterday')
+                end,
+                opts = { noremap = false, expr = false, buffer = true },
+            },
+            ["<leader>a;"] = {
+                action = function()
+                    return vim.cmd('ObsidianNew')
+                end,
+                opts = { noremap = false, expr = false, buffer = true },
             },
         },
     },
