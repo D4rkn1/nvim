@@ -3,6 +3,7 @@ return {
     config = function()
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
         vim.keymap.set("n", "<leader>gl", ":Git log --oneline<CR>", { silent = true })
+        vim.keymap.set("n", "<leader>gh", ":Telescope git_stash<CR>", { silent = true })
         vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
         vim.keymap.set("n", "<leader>gj", function()
             local file = vim.fn.expand("%:.")
