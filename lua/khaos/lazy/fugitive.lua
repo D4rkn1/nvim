@@ -30,7 +30,7 @@ return {
                     vim.cmd.Git({ 'pull', '--rebase' })
                 end, opts)
 
-                vim.keymap.set("n", "<leader>gp", ":Git push<CR>", opts)
+                vim.keymap.set("n", "<leader>gp", ":Git! push<CR>", opts)
             end,
         })
     end
