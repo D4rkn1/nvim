@@ -4,7 +4,22 @@ return {
         "nvim-lua/plenary.nvim"
     },
     config = function()
-        require('telescope').setup({})
+        require('telescope').setup({
+            pickers = {
+                find_files = {
+                    style = {
+                        border = "single",
+                    },
+                    theme = "ivy",
+                },
+                live_grep = {
+                    theme = "ivy",
+                },
+                grep_strings = {
+                    theme = "ivy",
+                },
+            },
+        })
 
         local builtin = require('telescope.builtin')
 
