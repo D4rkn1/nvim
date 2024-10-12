@@ -36,6 +36,7 @@ return {
                 map('n', '<leader>;S', gitsigns.stage_buffer)
                 map('n', '<leader>;u', gitsigns.undo_stage_hunk)
                 map('n', '<leader>;R', gitsigns.reset_buffer)
+                map('n', '<leader>;i', gitsigns.reset_buffer_index)
                 map('n', '<leader>;p', gitsigns.preview_hunk)
                 map('n', '<leader>;b', function() gitsigns.blame_line { full = true } end)
                 map('n', '<leader>;B', gitsigns.toggle_current_line_blame)
