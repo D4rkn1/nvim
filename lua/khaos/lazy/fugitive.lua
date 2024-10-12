@@ -9,6 +9,9 @@ return {
             local gitCmd = ":Git log -p -- " .. file
             vim.cmd(gitCmd)
         end)
+        vim.keymap.set("n", "<leader>gc", function()
+            vim.cmd.Git({ 'commit' })
+        end)
 
         local khaos_fug = vim.api.nvim_create_augroup("khaos_fug", {})
 
