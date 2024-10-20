@@ -7,12 +7,12 @@ return {
         'hrsh7th/cmp-cmdline',
         'L3MON4D3/LuaSnip',
         'saadparwaiz1/cmp_luasnip',
+        'rafamadriz/friendly-snippets',
         "hrsh7th/cmp-nvim-lua",
     },
 
     config = function()
         local cmp = require('cmp')
-
         cmp.setup({
             snippet = {
                 expand = function(args)
@@ -44,5 +44,7 @@ return {
                 ls.change_choice(1)
             end
         end, { silent = true })
+        require("luasnip.loaders.from_vscode").lazy_load()
+        require'luasnip'.filetype_extend("cs", {"unity"})
     end,
 }
