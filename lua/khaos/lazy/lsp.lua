@@ -39,6 +39,14 @@ return {
                     }
                 }
             end,
+            ["clangd"] = function()
+                lspconfig.clangd.setup {
+                    cmd = {
+                        "clangd",
+                        "--fallback-style=webkit"
+                    }
+                }
+            end,
         }
 
         vim.diagnostic.config({
