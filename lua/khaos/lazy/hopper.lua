@@ -4,6 +4,6 @@ return {
         require('hopper').setup({
             center_window = true,
         })
-        vim.keymap.set("n", "<leader>r", function() require('hopper').toggle() end)
+        vim.keymap.set("n", "<leader>r<leader>", function() require('hopper').toggle() end)
     end,
 }
