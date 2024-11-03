@@ -45,3 +45,4 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 })
 
 vim.opt.conceallevel = 1
+vim.opt.laststatus = 1
