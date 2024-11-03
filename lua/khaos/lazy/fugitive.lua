@@ -7,7 +7,8 @@ return {
         vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true })
         vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
         vim.keymap.set("n", "<leader>gp", ":Git! push<CR>", { silent = true })
-        vim.keymap.set("n", "<leader>gj", function()
+        vim.keymap.set("n", "<leader>gl", ":Gclog! -- %:p<CR>", { silent = true })
+        vim.keymap.set("n", "<leader>gL", function()
             local file = vim.fn.expand("%:.")
             local gitCmd = ":Git log -p -- " .. file
             vim.cmd(gitCmd)
