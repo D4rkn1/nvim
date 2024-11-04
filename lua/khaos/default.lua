@@ -19,7 +19,7 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
 
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 vim.opt.autoread = true
 
@@ -30,7 +30,7 @@ vim.opt.undofile = true
 
 vim.api.nvim_create_autocmd({ "BufWinEnter", "VimEnter", "WinEnter" }, {
   callback = function()
-    vim.opt.cursorline = true
+    vim.opt.cursorline = false
   end
 })
 vim.api.nvim_create_autocmd({ "WinLeave" }, {
