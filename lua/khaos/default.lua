@@ -29,19 +29,19 @@ vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.api.nvim_create_autocmd({ "BufWinEnter", "VimEnter", "WinEnter" }, {
-    callback = function()
-        vim.opt.cursorline = true
-    end
+  callback = function()
+    vim.opt.cursorline = true
+  end
 })
 vim.api.nvim_create_autocmd({ "WinLeave" }, {
-    callback = function()
-        vim.opt.cursorline = false
-    end
+  callback = function()
+    vim.opt.cursorline = false
+  end
 })
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
-    callback = function()
-        vim.highlight.on_yank {higroup='Visual', timeout=300}
-    end
+  callback = function()
+    vim.highlight.on_yank { higroup = 'Visual', timeout = 300 }
+  end
 })
 
 vim.opt.conceallevel = 1

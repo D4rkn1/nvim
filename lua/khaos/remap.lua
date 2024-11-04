@@ -16,8 +16,7 @@ vim.keymap.set("n", "<leader>co", "<cmd>copen<CR>")
 vim.keymap.set("n", "<leader>cj", "<cmd>cn<CR>")
 vim.keymap.set("n", "<leader>ck", "<cmd>cp<CR>")
 
-
 vim.keymap.set("n", "<leader>c<leader>", "<CMD>TSContextToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>[", function()
-    require("treesitter-context").go_to_context(vim.v.count1)
+  require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
