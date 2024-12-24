@@ -60,5 +60,6 @@ return {
     vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
     vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
     vim.keymap.set("n", "<leader>pn", function () builtin.find_files({cwd = vim.fn.stdpath("config")})end, {})
+    vim.keymap.set("n", "<leader>pe", function () builtin.live_grep({cwd = vim.fn.stdpath("config")})end, {})
   end
 }
