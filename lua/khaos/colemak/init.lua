@@ -31,6 +31,7 @@ vim.keymap.set({"n", "o", "v"}, "h", "e")
 vim.keymap.set({"n", "o", "v"}, "H", "E")
 vim.keymap.set({"n", "o", "v"}, "l", "i")
 vim.keymap.set("n", "k", "nzz")
+vim.keymap.set("n", "U", function() vim.cmd('redo') end)
 
 vim.keymap.set("n", "<leader>c<leader>", "<CMD>TSContextToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>[", function()
