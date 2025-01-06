@@ -5,7 +5,7 @@ return {
     vim.keymap.set("n", "<leader>gl", ":Git log --oneline<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gh", ":Telescope git_stash<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>ga", ":Git add .<CR>")
+    vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gp", ":Git! push<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gl", ":Gclog! -- %:p<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gL", function()
