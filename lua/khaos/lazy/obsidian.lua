@@ -157,6 +157,7 @@ return {
           vim.keymap.set('n', '<leader>at', '<cmd>:ObsidianTags<cr>')
           vim.keymap.set('n', '<leader>ag', '<cmd>:ObsidianSearch<cr>')
           vim.keymap.set('n', '<leader>ap', '<cmd>:ObsidianPasteImg<cr>')
+          vim.keymap.set('n', '<leader>af', '<cmd>:ObsidianQuickSwitch<cr>')
         end,
 
         -- Runs anytime you enter the buffer for a note.
