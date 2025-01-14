@@ -17,7 +17,5 @@ autocmd('LspAttach', {
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     vim.keymap.set("n", "<leader>dn", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "<leader>dp", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>rj", "<cmd>cnext<CR>zz")
-    vim.keymap.set("n", "<leader>rk", "<cmd>cprev<CR>zz")
   end
 })
