@@ -44,4 +44,10 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end
 })
 
+vim.api.nvim_create_autocmd({"CursorMoved", "BufWinEnter", "VimEnter", "WinEnter" }, {
+  callback = function()
+    vim.cmd("normal! zz")
+  end,
+})
+
 vim.opt.conceallevel = 1
