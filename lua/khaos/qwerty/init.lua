@@ -21,6 +21,8 @@ vim.keymap.set("n", "<leader>c<leader>", "<cmd>make<CR>")
 vim.keymap.set("n", "<leader>co", "<cmd>copen<CR>")
 vim.keymap.set("n", "<leader>cj", "<cmd>cn<CR>")
 vim.keymap.set("n", "<leader>ck", "<cmd>cp<CR>")
+vim.keymap.set("n", "<leader>rj", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<leader>rk", "<cmd>cprev<CR>zz")
 
 vim.keymap.set("n", "<leader>c<leader>", "<CMD>TSContextToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>[", function()
