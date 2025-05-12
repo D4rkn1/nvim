@@ -7,6 +7,7 @@ return {
     vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true })
     vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gp", ":Git! push<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>gw", ":Git switch -c ")
     vim.keymap.set("n", "<leader>go", ":Gclog! -- %:p<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gL", function()
       local file = vim.fn.expand("%:.")
