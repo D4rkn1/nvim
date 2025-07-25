@@ -10,4 +10,7 @@ return {
       vim.cmd('Markview')
     end, {})
   end,
+  experimental = {
+    check_rtp_message = false
+  },
 }
