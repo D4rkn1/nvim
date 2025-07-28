@@ -53,3 +53,6 @@ vim.api.nvim_create_autocmd({"CursorMoved", "BufWinEnter", "VimEnter", "WinEnter
 vim.opt.conceallevel = 1
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.cmd[[colorscheme carbonfox]]
+require("lualine").hide()
