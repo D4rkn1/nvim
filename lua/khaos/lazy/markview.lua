@@ -6,11 +6,13 @@ return {
     "nvim-tree/nvim-web-devicons"
   },
   config = function()
+    require("markview").setup({
+      experimental = {
+        check_rtp_message = false
+      },
+    })
     vim.keymap.set('n', '<leader>mt', function()
       vim.cmd('Markview')
     end, {})
   end,
-  experimental = {
-    check_rtp_message = false
-  },
 }
