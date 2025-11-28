@@ -35,7 +35,7 @@ vim.keymap.set("n", "U", function() vim.cmd('redo') end)
 vim.keymap.set("n", "<leader>rn", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>re", "<cmd>cprev<CR>zz")
 
-vim.keymap.set("n", "<leader>c<leader>", "<CMD>TSContextToggle<CR>", { silent = true })
+vim.keymap.set("n", "<leader>c<leader>", "<CMD>TSContext toggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>[", function()
   require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
