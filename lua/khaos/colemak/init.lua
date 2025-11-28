@@ -40,6 +40,14 @@ vim.keymap.set("n", "<leader>[", function()
   require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
 
+vim.keymap.set("n", "<leader>oa", function()
+  require("overseer").run_task({ name = "ninja" }, function(task)
+    if task then
+      task:open_output()
+    end
+  end)
+end, { silent = true })
+
 vim.keymap.set("i", "<C-y>", function()
   require("khaos.shortcut.endl").Init()
 end, { silent = true })
