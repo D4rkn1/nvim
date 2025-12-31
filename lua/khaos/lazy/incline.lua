@@ -14,6 +14,7 @@ return {
         }
       end
     }
+    require("incline").toggle()
   end,
   event = 'VeryLazy',
 }
