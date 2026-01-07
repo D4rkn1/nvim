@@ -48,6 +48,12 @@ vim.keymap.set("n", "<leader>oa", function()
     end
   end)
 end, { silent = true })
+vim.keymap.set("n", "<leader>os", function()
+  vim.cmd('OverseerRun')
+end, { silent = true })
+vim.keymap.set("n", "<leader>o<leader>", function()
+  vim.cmd('OverseerToggle')
+end, { silent = true })
 
 vim.keymap.set("i", "<C-y>", function()
   require("khaos.shortcut.endl").Init()
