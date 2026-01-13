@@ -42,7 +42,9 @@ vim.keymap.set("n", "<leader>[", function()
 end, { silent = true })
 
 vim.keymap.set("n", "<leader>oa", function()
-  require("overseer").run_task({ name = "ninja" }, function(task)
+  local task_name = "run "
+  task_name = task_name .. vim.bo.filetype
+  require("overseer").run_task({ name = task_name }, function(task)
     if task then
       task:open_output()
     end
