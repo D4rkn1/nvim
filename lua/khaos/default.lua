@@ -50,6 +50,8 @@ vim.api.nvim_create_autocmd({"CursorMoved", "BufWinEnter", "VimEnter", "WinEnter
   end,
 })
 
+vim.g.fugitive_no_blur = 1
+
 vim.opt.conceallevel = 1
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

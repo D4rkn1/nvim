@@ -37,5 +37,5 @@
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "undotree": { "branch": "main", "commit": "02b69aed427b848c4dca483fc5e9524b6019c296" },
   "vertgrid.nvim": { "branch": "master", "commit": "4ae3f1f148e78bbdc66e53aa6bdcb28b43f7932b" },
-  "vim-fugitive": { "branch": "master", "commit": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0" }
+  "vim-fugitive": { "branch": "master", "commit": "21e0babbd6b5fcdb9aa918c9bbc16f0552283928" }
 }

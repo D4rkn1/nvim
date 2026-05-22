@@ -1,7 +1,7 @@
 return {
-  "tpope/vim-fugitive",
+  "D4rkn1/vim-fugitive",
   config = function()
-    vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+    vim.keymap.set("n", "<leader>gs", ":Git ++curwin<CR>", { silent = true})
     vim.keymap.set("n", "<leader>gl", ":Git log --oneline<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gh", ":Telescope git_stash<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true })
