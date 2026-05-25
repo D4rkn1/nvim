@@ -11,56 +11,77 @@ return {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         live_grep = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         grep_strings = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         git_files = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         diagnostics = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         buffers = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
         help_tags = {
           style = {
             border = "single",
           },
           theme = "ivy",
+          layout_config = {
+            height = vim.o.lines,
+          },
         },
       },
     })
 
     local builtin = require('telescope.builtin')
 
-    vim.keymap.set("n", "<leader>pf", function() builtin.find_files({hidden = true}) end, {})
+    vim.keymap.set("n", "<leader>pf", function() builtin.find_files({ hidden = true }) end, {})
     vim.keymap.set("n", "<leader>pc", builtin.git_files, {})
     vim.keymap.set("n", "<leader>pg", builtin.live_grep, {})
     vim.keymap.set("n", "<leader>pd", builtin.diagnostics, {})
     vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
     vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
-    vim.keymap.set("n", "<leader>pn", function () builtin.find_files({cwd = vim.fn.stdpath("config")})end, {})
-    vim.keymap.set("n", "<leader>pe", function () builtin.live_grep({cwd = vim.fn.stdpath("config")})end, {})
+    vim.keymap.set("n", "<leader>pn", function() builtin.find_files({ cwd = vim.fn.stdpath("config") }) end, {})
+    vim.keymap.set("n", "<leader>pe", function() builtin.live_grep({ cwd = vim.fn.stdpath("config") }) end, {})
     vim.keymap.set("n", "<leader>pm", builtin.man_pages, {})
   end
 }
