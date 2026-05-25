@@ -23,8 +23,6 @@ vim.opt.cursorline = true
 
 vim.opt.autoread = true
 
-vim.opt.laststatus = 0
-
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
