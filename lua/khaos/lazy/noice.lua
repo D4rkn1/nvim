@@ -55,6 +55,10 @@ return {
           filter = { event = "msg_show", kind = "search_count" },
           opts = { skip = true },
         },
+        {
+          filter = { event = "notify", kind = "info" },
+          opts = { skip = true },
+        },
       },
     })
   end
