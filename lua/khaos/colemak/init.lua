@@ -41,22 +41,6 @@ vim.keymap.set("n", "<leader>[", function()
   require("treesitter-context").go_to_context(vim.v.count1)
 end, { silent = true })
 
-vim.keymap.set("n", "<leader>oa", function()
-  local task_name = "run "
-  task_name = task_name .. vim.bo.filetype
-  require("overseer").run_task({ name = task_name }, function(task)
-    if task then
-      task:open_output()
-    end
-  end)
-end, { silent = true })
-vim.keymap.set("n", "<leader>os", function()
-  vim.cmd('OverseerRun')
-end, { silent = true })
-vim.keymap.set("n", "<leader>o<leader>", function()
-  vim.cmd('OverseerToggle')
-end, { silent = true })
-
 vim.keymap.set("i", "<C-y>", function()
   require("khaos.shortcut.endl").Init()
 end, { silent = true })
