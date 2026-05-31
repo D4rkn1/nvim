@@ -3,6 +3,7 @@ return {
   event = "VeryLazy",
   dependencies = {
     "MunifTanjim/nui.nvim",
+    "folke/snacks.nvim",
   },
   config = function()
     require("noice").setup({
@@ -61,5 +62,5 @@ return {
         },
       },
     })
-  end
+  end,
 }
