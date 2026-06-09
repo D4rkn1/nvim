@@ -1,12 +1,23 @@
 return {
   "D4rkn1/vim-fugitive",
   config = function()
-    vim.keymap.set("n", "<leader>gs", ":Git ++curwin<CR>", { silent = true})
+    vim.keymap.set("n", "<leader>gs", ":Git ++curwin<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gl", ":Git log --oneline<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gh", ":Telescope git_stash<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gb", ":Telescope git_branches<CR>", { silent = true })
     vim.keymap.set("n", "<leader>ga", ":Git add .<CR>", { silent = true })
-    vim.keymap.set("n", "<leader>gp", ":Git! push<CR>", { silent = true })
+    vim.keymap.set("n", "<leader>gp", function()
+      vim.notify("pushing changes")
+      vim.fn.jobstart({ "git", "push" }, {
+        on_exit = function(_, code)
+          if code == 0 then
+            vim.notify("changes pushed")
+            return
+          end
+          vim.notify('push failed')
+        end,
+      })
+    end)
     vim.keymap.set("n", "<leader>gw", ":Git switch -c ")
     vim.keymap.set("n", "<leader>go", ":Gclog! -- %:p<CR>", { silent = true })
     vim.keymap.set("n", "<leader>gL", function()
@@ -15,7 +26,7 @@ return {
       vim.cmd(gitCmd)
     end)
     vim.keymap.set("n", "<leader>gc", function()
-      vim.cmd.Git({ 'commit' })
+      vim.cmd.Git({ "commit" })
     end)
 
     local khaos_fug = vim.api.nvim_create_augroup("khaos_fug", {})
@@ -32,9 +43,9 @@ return {
         local bufnr = vim.api.nvim_get_current_buf()
         local opts = { buffer = bufnr, remap = false }
         vim.keymap.set("n", "<leader>gP", function()
-          vim.cmd.Git({ 'pull', '--rebase' })
+          vim.cmd.Git({ "pull", "--rebase" })
         end, opts)
       end,
     })
-  end
+  end,
 }
