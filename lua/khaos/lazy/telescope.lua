@@ -12,7 +12,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         live_grep = {
@@ -21,7 +21,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         grep_strings = {
@@ -30,7 +30,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         git_files = {
@@ -39,7 +39,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         diagnostics = {
@@ -48,7 +48,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         buffers = {
@@ -57,7 +57,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
         help_tags = {
@@ -66,7 +66,7 @@ return {
           },
           theme = "ivy",
           layout_config = {
-            height = vim.o.lines,
+            height = vim.o.lines - vim.o.cmdheight + 1,
           },
         },
       },
