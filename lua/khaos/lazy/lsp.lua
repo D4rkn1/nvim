@@ -67,7 +67,7 @@ return {
       float = {
         focusable = true,
         border = "none",
-        source = "never",
+        source = false,
       },
       virtual_text = false,
       signs = {
