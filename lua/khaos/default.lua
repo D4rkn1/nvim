@@ -29,20 +29,20 @@ vim.opt.undofile = true
 vim.api.nvim_create_autocmd({ "BufWinEnter", "VimEnter", "WinEnter" }, {
   callback = function()
     vim.opt.cursorline = true
-  end
+  end,
 })
 vim.api.nvim_create_autocmd({ "WinLeave" }, {
   callback = function()
     vim.opt.cursorline = false
-  end
+  end,
 })
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   callback = function()
-    vim.highlight.on_yank { higroup = 'Visual', timeout = 300 }
-  end
+    vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+  end,
 })
 
-vim.api.nvim_create_autocmd({"CursorMoved", "BufWinEnter", "VimEnter", "WinEnter", "VimResized"}, {
+vim.api.nvim_create_autocmd({ "CursorMoved", "InsertLeave", "BufWinEnter", "VimEnter", "WinEnter", "VimResized" }, {
   callback = function()
     vim.cmd("normal! zz")
   end,
@@ -54,5 +54,5 @@ vim.opt.conceallevel = 1
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
-vim.cmd[[colorscheme carbonfox]]
+vim.cmd([[colorscheme carbonfox]])
 require("lualine").hide()

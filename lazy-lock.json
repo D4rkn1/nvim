@@ -39,6 +39,6 @@
   "treesitter-parser-registry": { "branch": "main", "commit": "6eb15358bb9fc88f0d3401d8538d56652e9bdf3c" },
   "trouble.nvim": { "branch": "main", "commit": "bd67efe408d4816e25e8491cc5ad4088e708a69a" },
   "undotree": { "branch": "main", "commit": "02b69aed427b848c4dca483fc5e9524b6019c296" },
-  "vertgrid.nvim": { "branch": "master", "commit": "ec543c1285e25323b16e4cfa0d966b5925ed495c" },
+  "vertgrid.nvim": { "branch": "master", "commit": "44a922a2d0ea225e5f20b8d0e9f30ca14ae2d03a" },
   "vim-fugitive": { "branch": "master", "commit": "21e0babbd6b5fcdb9aa918c9bbc16f0552283928" }
 }
