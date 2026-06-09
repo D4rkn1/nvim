@@ -42,11 +42,7 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "CursorMoved", "InsertLeave", "BufWinEnter", "VimEnter", "WinEnter", "VimResized" }, {
-  callback = function()
-    vim.cmd("normal! zz")
-  end,
-})
+vim.o.scrolloff = 999
 
 vim.g.fugitive_no_blur = 1
 
