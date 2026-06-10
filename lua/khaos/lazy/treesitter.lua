@@ -1,39 +1,28 @@
 return {
   "neovim-treesitter/nvim-treesitter",
-  dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
+  dependencies = { "neovim-treesitter/treesitter-parser-registry" },
+  lazy = false,
   build = ":TSUpdate",
-  config = function()
-    require("nvim-treesitter").setup({
-      ensure_installed = {
-        "vimdoc",
-        "javascript",
-        "typescript",
-        "c",
-        "lua",
-        "go",
-        "jsdoc",
-        "bash",
-        "c_sharp",
-        "regex",
-      },
-
-      sync_install = false,
-
-      auto_install = true,
-
-      indent = {
-        enable = true,
-      },
-
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = { "markdown" },
-      },
+  config = function(args)
+    require("nvim-treesitter").install({
+      "vimdoc",
+      "javascript",
+      "typescript",
+      "c",
+      "lua",
+      "go",
+      "jsdoc",
+      "bash",
+      "c_sharp",
+      "regex",
     })
-
     vim.api.nvim_create_autocmd("FileType", {
       callback = function()
-        pcall(vim.treesitter.start)
+        if not pcall(vim.treesitter.start, args.buf) then
+          return
+        end
+        vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+        vim.wo.foldmethod = "expr"
         vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
       end,
     })
