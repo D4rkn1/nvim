@@ -1,6 +1,6 @@
 return {
   "folke/tokyonight.nvim",
-  lazy = false,
+  lazy = true,
   init = function()
     require("tokyonight").setup({
       style = "night",
@@ -9,6 +9,5 @@ return {
         color.comment = "#00a16b"
       end,
     })
-    vim.cmd.colorscheme("tokyonight")
   end,
 }
