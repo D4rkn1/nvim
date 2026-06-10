@@ -42,3 +42,5 @@ end, { silent = true })
 vim.keymap.set("i", "<C-y>", function()
   require("khaos.shortcut.endl").Init()
 end, { silent = true })
+
+vim.keymap.set("n", "<leader>/", function() vim.cmd('NoiceHistory') end)
