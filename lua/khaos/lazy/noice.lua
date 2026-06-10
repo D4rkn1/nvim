@@ -50,6 +50,37 @@ return {
             winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
           },
         },
+        popup = {
+          position = {
+            row = 1,
+            col = 0,
+          },
+          size = {
+            width = "100%",
+            height = "100%",
+          },
+          border = {
+            style = "none",
+          },
+        },
+      },
+      commands = {
+        history = {
+          view = "popup",
+          filter = {
+            any = {
+              { event = "notify" },
+              { error = true },
+              { warning = true },
+              { event = "msg_show", kind = "" },
+              { event = "lsp", kind = "message" },
+            },
+          },
+          opts = {
+            enter = true,
+            format = "details",
+          },
+        },
       },
     })
   end,
