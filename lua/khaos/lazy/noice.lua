@@ -72,7 +72,7 @@ return {
               { event = "notify" },
               { error = true },
               { warning = true },
-              { event = "msg_show"},
+              { event = "msg_show" },
               { event = "lsp", kind = "message" },
             },
           },
